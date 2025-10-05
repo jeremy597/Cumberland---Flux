@@ -12,5 +12,11 @@ export default function Home(){
         <Link href="/join" className="px-4 py-2 rounded-xl border">Join mailing list</Link>
       </div>
     </section>
+
+
+<div className="p-4 my-4 bg-red-500 text-white text-xs">Tailwind test</div>
+
+
+
   );
 }
