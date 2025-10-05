@@ -1,4 +1,5 @@
-import "./globals.css";
+﻿import "./globals.css";
+import { display, sans, serif, mono } from "@/app/fonts";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -9,8 +10,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-slate-900">
+    <html lang="en" className={${display.variable}   }>
+      <body className="min-h-screen bg-skin-bg text-skin-text font-sans">
         <SiteHeader />
         <main className="mx-auto max-w-6xl px-4 py-10">{children}</main>
         <SiteFooter />
