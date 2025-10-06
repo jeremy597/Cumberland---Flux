@@ -2,39 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===== LIGHT THEME TOKENS ===== */
 :root{
-  /* neutrals (from your palette) */
-  --bg: 180 14% 97%;          /* off-white-mist #F5F7F2 */
-  --surface: 60 15% 92%;      /* ivory-cloud #EAEAE4 */
-  --text: 60 4% 12%;          /* charcoal-slate #1E1E1C */
-  --text-muted: 86 8% 49%;    /* stone-gray #7C8572 */
-  --border: 168 34% 88%;      /* pale-aqua-mist #D8ECE7 */
-  --ring: 205 100% 50%;       /* skywave-blue #009DFF */
+  --bg: 180 14% 97%;
+  --surface: 60 15% 92%;
+  --text: 60 4% 12%;
+  --text-muted: 86 8% 49%;
+  --border: 168 34% 88%;
+  --ring: 205 100% 50%;
 
-  /* brand */
-  --primary: 234 68% 39%;     /* cobalt-shadow #2035A7 */
+  --primary: 234 68% 39%;
   --on-primary: 0 0% 100%;
-  --secondary: 183 62% 43%;   /* verdigris #28AFB0 */
+  --secondary: 183 62% 43%;
   --on-secondary: 0 0% 100%;
-  --accent: 348 100% 63%;     /* folly #FF4365 */
+  --accent: 348 100% 63%;
   --on-accent: 0 0% 100%;
 
-  /* status */
-  --success: 90 72% 54%;      /* clover-pop #A6E22E */
+  --success: 90 72% 54%;
   --on-success: 0 0% 100%;
-  --warning: 39 100% 64%;     /* solar-amber #FFB847 */
+  --warning: 39 100% 64%;
   --on-warning: 16 15% 10%;
-  --danger: 355 90% 25%;      /* blood-red #74070E */
+  --danger: 355 90% 25%;
   --on-danger: 0 0% 100%;
 
-  /* Google font stacks (mirrors next/font config) */
   --font-display: "Space Grotesk", Inter, ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", Times, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
-  /* responsive type scale */
   --step--1: clamp(0.85rem, 0.80rem + 0.3vw, 0.95rem);
   --step-0:  clamp(1.00rem, 0.92rem + 0.4vw, 1.125rem);
   --step-1:  clamp(1.25rem, 1.10rem + 0.8vw, 1.50rem);
@@ -43,14 +37,13 @@
   --step-4:  clamp(2.44rem, 1.60rem + 3.0vw, 3.40rem);
 }
 
-/* ===== DARK THEME ===== */
 :root.dark, [data-theme="dark"]{
-  --bg: 180 41% 17%;          /* midnight-teal */
-  --surface: 60 5% 11%;        /* deep charcoal */
+  --bg: 180 41% 17%;
+  --surface: 60 5% 11%;
   --text: 86 22% 95%;
   --text-muted: 191 21% 73%;
-  --border: 152 24% 71%;       /* celadon-ish */
-  --ring: 183 62% 43%;         /* verdigris */
+  --border: 152 24% 71%;
+  --ring: 183 62% 43%;
 
   --primary: 234 68% 39%;
   --on-primary: 0 0% 100%;
@@ -60,7 +53,6 @@
   --on-accent: 0 0% 100%;
 }
 
-/* ===== BASE TYPOGRAPHY ===== */
 html, body { height: 100%; }
 body {
   margin: 0;
@@ -81,11 +73,9 @@ h6{ font-size: var(--step--1); font-weight: 600; text-transform: uppercase; lett
 p, li { font-size: var(--step-0); }
 small, .meta { font-size: var(--step--1); opacity: .9; }
 
-/* ===== TOKEN UTILITIES ===== */
 .bg-app{ background-color: hsl(var(--bg)); color: hsl(var(--text)); }
 .card{ background-color: hsl(var(--surface)); border: 1px solid hsl(var(--border)); }
 
-/* Buttons */
 .btn-primary{
   @apply inline-flex items-center justify-center rounded-xl px-4 py-2;
   background: hsl(var(--primary));
