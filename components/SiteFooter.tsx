@@ -13,25 +13,17 @@ export default function SiteFooter() {
               <div className="text-skin-textMuted">Belonging through action.</div>
             </div>
           </div>
-
           <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
             <Link href="/events" className="text-skin-textMuted hover:text-skin-text">Events</Link>
             <Link href="/about"  className="text-skin-textMuted hover:text-skin-text">About</Link>
             <Link href="/join"   className="text-skin-textMuted hover:text-skin-text">Join</Link>
-            <a
-              href="mailto:hello@example.org"
-              className="text-skin-textMuted hover:text-skin-text"
-            >
-              Contact
-            </a>
+            <a href="mailto:hello@example.org" className="text-skin-textMuted hover:text-skin-text">Contact</a>
           </nav>
         </div>
-
         <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-skin-textMuted">
           <p>© {new Date().getFullYear()} Cumberland Flux. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="#" aria-label="Instagram" className="hover:text-skin-text">
-              {/* minimalist icon */}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" />
                 <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />

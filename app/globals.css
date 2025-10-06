@@ -1,28 +1,40 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ---- LIGHT ---- */
+/* ===== LIGHT THEME TOKENS ===== */
 :root{
-  --bg: 84 24% 96%; --surface: 60 12% 91%;
-  --text: 60 3% 11%; --text-muted: 88 8% 48%;
-  --border: 165 34% 89%; --ring: 203 100% 50%;
+  /* neutrals (from your palette) */
+  --bg: 180 14% 97%;          /* off-white-mist #F5F7F2 */
+  --surface: 60 15% 92%;      /* ivory-cloud #EAEAE4 */
+  --text: 60 4% 12%;          /* charcoal-slate #1E1E1C */
+  --text-muted: 86 8% 49%;    /* stone-gray #7C8572 */
+  --border: 168 34% 88%;      /* pale-aqua-mist #D8ECE7 */
+  --ring: 205 100% 50%;       /* skywave-blue #009DFF */
 
-  --primary: 231 68% 39%; --on-primary: 0 0% 100%;
-  --secondary: 180 63% 42%; --on-secondary: 0 0% 100%;
-  --accent: 352 100% 50%; --on-accent: 0 0% 100%;
+  /* brand */
+  --primary: 234 68% 39%;     /* cobalt-shadow #2035A7 */
+  --on-primary: 0 0% 100%;
+  --secondary: 183 62% 43%;   /* verdigris #28AFB0 */
+  --on-secondary: 0 0% 100%;
+  --accent: 348 100% 63%;     /* folly #FF4365 */
+  --on-accent: 0 0% 100%;
 
-  --success: 80 76% 53%; --on-success: 0 0% 100%;
-  --warning: 27 100% 50%; --on-warning: 15 6% 10%;
-  --danger: 356 89% 24%; --on-danger: 0 0% 100%;
+  /* status */
+  --success: 90 72% 54%;      /* clover-pop #A6E22E */
+  --on-success: 0 0% 100%;
+  --warning: 39 100% 64%;     /* solar-amber #FFB847 */
+  --on-warning: 16 15% 10%;
+  --danger: 355 90% 25%;      /* blood-red #74070E */
+  --on-danger: 0 0% 100%;
 
-  /* Fonts via next/font variables */
+  /* Google font stacks (mirrors next/font config) */
   --font-display: "Space Grotesk", Inter, ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", Times, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
-  /* Responsive type scale (clean, approachable) */
+  /* responsive type scale */
   --step--1: clamp(0.85rem, 0.80rem + 0.3vw, 0.95rem);
   --step-0:  clamp(1.00rem, 0.92rem + 0.4vw, 1.125rem);
   --step-1:  clamp(1.25rem, 1.10rem + 0.8vw, 1.50rem);
@@ -31,53 +43,53 @@
   --step-4:  clamp(2.44rem, 1.60rem + 3.0vw, 3.40rem);
 }
 
-/* ---- DARK ---- */
+/* ===== DARK THEME ===== */
 :root.dark, [data-theme="dark"]{
-  --bg: 180 40% 18%; --surface: 60 3% 11%;
-  --text: 84 24% 96%; --text-muted: 187 18% 71%;
-  --border: 140 39% 79%; --ring: 180 63% 42%;
+  --bg: 180 41% 17%;          /* midnight-teal */
+  --surface: 60 5% 11%;        /* deep charcoal */
+  --text: 86 22% 95%;
+  --text-muted: 191 21% 73%;
+  --border: 152 24% 71%;       /* celadon-ish */
+  --ring: 183 62% 43%;         /* verdigris */
 
-  --primary: 231 68% 39%; --on-primary: 0 0% 100%;
-  --secondary: 180 63% 42%; --on-secondary: 0 0% 100%;
-  --accent: 352 100% 50%; --on-accent: 0 0% 100%;
+  --primary: 234 68% 39%;
+  --on-primary: 0 0% 100%;
+  --secondary: 183 62% 43%;
+  --on-secondary: 0 0% 100%;
+  --accent: 348 100% 63%;
+  --on-accent: 0 0% 100%;
 }
 
-/* Global defaults */
-body{ font-family: var(--font-sans); font-size: var(--step-0); line-height: 1.6; background-color: hsl(var(--bg)); color: hsl(var(--text)); }
-
-/* Headings: friendly, modern spacing */
-h1,h2,h3{ font-family: var(--font-display); line-height: 1.15; letter-spacing: 0.01em; }
-h4,h5,h6{ font-family: var(--font-display); line-height: 1.2;  letter-spacing: 0.005em; }
+/* ===== BASE TYPOGRAPHY ===== */
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  background-color: hsl(var(--bg));
+  color: hsl(var(--text));
+}
+h1,h2,h3 { font-family: var(--font-display); line-height: 1.15; letter-spacing: 0.01em; }
+h4,h5,h6 { font-family: var(--font-display); line-height: 1.2;  letter-spacing: 0.005em; }
 h1{ font-size: var(--step-4); font-weight: 700; }
 h2{ font-size: var(--step-3); font-weight: 700; }
 h3{ font-size: var(--step-2); font-weight: 600; }
 h4{ font-size: var(--step-1); font-weight: 600; }
 h5{ font-size: var(--step-0); font-weight: 600; }
 h6{ font-size: var(--step--1); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
-
-/* Body text sizes */
 p, li { font-size: var(--step-0); }
 small, .meta { font-size: var(--step--1); opacity: .9; }
 
-/* Editorial accent (quotes, pull-quotes) */
-blockquote, .pullquote{
-  font-family: var(--font-serif);
-  font-size: var(--step-1);
-  font-weight: 400;
-  line-height: 1.45;
-}
+/* ===== TOKEN UTILITIES ===== */
+.bg-app{ background-color: hsl(var(--bg)); color: hsl(var(--text)); }
+.card{ background-color: hsl(var(--surface)); border: 1px solid hsl(var(--border)); }
 
-/* Buttons / UI */
-button, .btn{ font-family: var(--font-sans); font-weight: 600; letter-spacing: 0.01em; }
-.btn-primary{ @apply inline-flex items-center justify-center rounded-xl px-4 py-2; background: hsl(var(--primary)); color: hsl(var(--on-primary)); }
+/* Buttons */
+.btn-primary{
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2;
+  background: hsl(var(--primary));
+  color: hsl(var(--on-primary));
+}
 .btn-primary:hover{ filter: brightness(.95); }
 .link-accent{ color: hsl(var(--primary)); }
-
-/* Data & tables: tabular numbers for alignment */
-.num, table td, .stat{
-  font-feature-settings: "tnum" 1, "cv05" 1;
-  font-variant-numeric: tabular-nums;
-}
-
-/* Code */
-code, pre, .code { font-family: var(--font-mono); font-size: 0.95em; }

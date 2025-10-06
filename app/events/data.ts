@@ -14,8 +14,7 @@ export const events: EventItem[] = [
     time: "9:00–11:00 AM",
     location: "Community Café, Cumberland",
     rsvp: true,
-    description:
-      "Hands-on brewing tables, bring beans if you like. Alcohol not served; refreshments provided.",
+    description: "Hands-on brewing tables, bring beans if you like. Alcohol not served; refreshments provided.",
   },
   {
     title: "Community Walk – Downtown to Canal",
